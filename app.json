@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "second_practice",
+    "name": "ZoomKar",
     "slug": "snack-42197595-8fd7-4da1-849f-a2337d3798a9",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#00AEEF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,16 +18,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.taimoorhamza199.snack421975958fd74da1849fa2337d3798a9"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#00AEEF"
+      },
+      "package": "com.taimoorhamza199.snack421975958fd74da1849fa2337d3798a9"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "af521a5d-7972-42be-b36a-0f17e27ce1f1"
+      }
     }
   }
 }

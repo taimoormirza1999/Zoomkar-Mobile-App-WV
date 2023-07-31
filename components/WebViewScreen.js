@@ -1,28 +1,30 @@
 import React from 'react';
-import { View, KeyboardAvoidingView, Platform, StyleSheet, SafeAreaView,StatusBar  } from 'react-native';
+import { View, StyleSheet, StatusBar, SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
 
-export default function WebViewScreen() {
+export default function App() {
   return (
-    <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-      <SafeAreaView style={styles.container}>
-       <StatusBar backgroundColor="#ffffff" barStyle="dark-content"/>
+    <View style={styles.container}>
+      <SafeAreaView style={styles.safeArea}>
+   
         <WebView
           source={{ uri: 'https://staging.zoomkar.com/' }}
           style={styles.webview}
         />
       </SafeAreaView>
-    </KeyboardAvoidingView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1
+  },
+  safeArea: {
     flex: 1,
-    marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-
+    backgroundColor: '#00aeef', // Ensure the SafeAreaView background color matches the StatusBar background color
   },
   webview: {
-    flex: 1,
+    flex:1,
   },
 });
